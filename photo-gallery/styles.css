@@ -10,6 +10,40 @@ header {
     text-align: center;
     padding: 20px;
 }
+/* Header Animation */
+header h1 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Photo Gallery Animation */
+.photo-gallery img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Animation */
+footer p {
+    transition: color 0.3s ease-in-out;
+}
+
+footer p:hover {
+    color: blue;
+}
+
 
 main {
     text-align: center;

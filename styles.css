@@ -4,6 +4,40 @@ body {
     padding: 0;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
+/* Header Animation */
+header h1 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Photo Gallery Animation */
+.photo-gallery img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer Animation */
+footer p {
+    transition: color 0.3s ease-in-out;
+}
+
+footer p:hover {
+    color: blue;
+}
+
 
 header {
     background-color: pink;
@@ -38,4 +72,43 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
+}
+
+/* Footer Animation */
+footer p {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+footer p:hover {
+    color: blue; /* Change text color on hover */
+    transform: translateY(-5px); /* Move text up slightly on hover */
+}
+
+
+/* Header Animation */
+header {
+    background-color: pink;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Ensure position is set to relative */
+    overflow: hidden; /* Hide overflow for child elements */
+}
+
+header h1 {
+    background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3); /* Define a gradient color */
+    background-clip: text; /* Apply the gradient as the text color */
+    -webkit-background-clip: text; /* For older versions of Safari */
+    color: transparent; /* Hide the original text color */
+    animation: rainbow 14s linear infinite; /* Add a rainbow animation */
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    14.2857% { background-position: 14.2857% 50%; }
+    28.5714% { background-position: 28.5714% 50%; }
+    42.8571% { background-position: 42.8571% 50%; }
+    57.1428% { background-position: 57.1428% 50%; }
+    71.4285% { background-position: 71.4285% 50%; }
+    85.7142% { background-position: 85.7142% 50%; }
+    100% { background-position: 100% 50%; }
 }
